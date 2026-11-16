@@ -1,0 +1,76 @@
+# Every threshold lives here. Nothing below is hardcoded in the .py files.
+# STRATEGY VERSION v1 — the strategy exactly as specified/built through M3. Frozen once M5 completes.
+version: v1
+
+gate:
+  th_trig:        { NIFTY: 20,  SENSEX: 60 }    # C1: signed 5-min burst in trade direction
+  th_exh:         { NIFTY: 40,  SENSEX: 130 }   # C2: SKIP if signed 30-min move >= this
+  rng_min: 0.15                                  # C4 range window (strict: rng_min < rng < rng_max)
+  rng_max: 0.85
+  midday_start: "12:00"                          # C5 blocked iff midday_start <= t < midday_end (IST)
+  midday_end:   "13:00"                          # exclusive: 13:00:00 is allowed
+  max_consec_sl: 2                               # C6 revenge chain -> timeout
+  timeout_minutes: 60
+  day_brake: -7000                               # C7 pass iff day_realised_pnl > day_brake (strict); <= trips
+  premium_band: { NIFTY: [120, 215], SENSEX: [300, 460] }   # C8, per-index, CE or PE
+
+flip_rule:
+  enabled: false     # SHIP DISABLED - provisional per research; needs forward validation
+  burst:   { NIFTY: 30, SENSEX: 90 }
+  life_minutes: 30
+
+exits:
+  sl_pct: 0.15        # SL = entry*(1-0.15); never widened
+  t1_pct: 0.08        # T1 = entry*1.08; on T1 fill, SL on remainder -> entry (cost)
+  t2_pct: 0.25        # T2 = entry*1.25
+  flatten_time: "15:15"
+  intrabar_tiebreak: sl_first   # bar spanning SL and T1 (or SL and T2): SL fills first
+  t1_fraction: 0.5      # share of the position sold at T1 (SPEC GAP - assumption, see v1/README)
+
+risk:
+  lot_size: { NIFTY: 65, SENSEX: 20 }   # verify from instrument master
+  max_trades_per_day: 12
+
+sanity:
+  # Research doc's actual trading days - the ONLY days compared against the target.
+  days: ["2025-10-06", "2025-10-07", "2025-10-14", "2025-10-16"]
+  gate_target: 13452
+  engine_raw_target: -788
+  tolerance: 250
+
+run:
+  start: "2025-10-05"     # full calendar range; non-trading days silently dropped.
+  end:   "2025-10-17"     # Its total is reported separately, never compared to the target.
+
+mode: synth    # "synth" = Black-Scholes | "real" = Dhan expired-options data
+
+synth:
+  iv: { NIFTY: 0.13, SENSEX: 0.13 }     # ATM weekly IV assumption, explicit
+  risk_free: 0.065
+  strike_step: { NIFTY: 50, SENSEX: 100 }
+  min_T_minutes: 1                      # floor on time-to-expiry (expiry-day T->0 guard)
+  itm_steps: 0                          # 0 = ATM, 1 = one step ITM
+  expiry_weekday: { NIFTY: 1, SENSEX: 3 }   # 0=Mon..6=Sun. VERIFY at M4 for Oct 2025 (placeholder values)
+
+data:
+  cache_dir: "data/cache"
+  manual_dir: "data/manual"     # file-based CandleSource fallback: {SYMBOL}_{YYYY-MM-DD}.csv
+  scrip_master_url: "https://images.dhan.co/api-data/api-scrip-master.csv"
+  scrip_master_path: "data/scrip_master.csv"
+  interval_minutes: 5
+  fetch_from: "09:00"      # request window start; Dhan's fromDate is exclusive at the boundary
+  market_open: "09:15"
+  market_close: "15:30"
+
+features:
+  m5_minutes: 5
+  m30_minutes: 30
+  trend_minutes: 60
+  signal_time: bar_start   # "bar_start" (default, as agreed at M1) | "bar_close" (= bar start + 5 min); used by C5/C6 stamps
+
+dhan:
+  base_url: "https://api.dhan.co/v2"
+  allowed_path_prefixes: ["/charts/"]    # expired/rolling options path added at M4 after docs check
+  max_retries: 3
+  backoff_seconds: 1.5
+  timeout_seconds: 20

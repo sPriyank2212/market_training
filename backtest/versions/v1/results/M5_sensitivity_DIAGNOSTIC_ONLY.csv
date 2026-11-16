@@ -1,0 +1,16 @@
+scenario,sanity_pnl,sanity_trades,full_pnl,full_trades,gap_to_target
+v1 baseline (as specified),53,2,-1919,11,-13399
+C8 band off,-511,5,-3340,24,-13963
+lot NIFTY 75,53,2,-1880,11,-13399
+IV 9% (≈real),0,0,-730,6,-13452
+1-step ITM,84,2,79,10,-13368
+2-step ITM,-1347,1,-2494,11,-14799
+t1_fraction 0.33,294,2,-1666,11,-13158
+t1_fraction 1.0 (all out at T1),-550,2,-2557,11,-14002
+signal_time=bar_close,53,2,720,10,-13399
+C8 off + lot 75,-598,5,-3589,24,-14050
+C8 off + IV 9%,-252,5,-1377,24,-13704
+C8 off + 1-step ITM + lot 75,-644,5,-4608,24,-14096
+IV 9% + 1-step ITM,127,2,-1571,13,-13325
+control: gate OFF (own-scanner ungated),2197,49,4730,131,-11255
+control: gate OFF + lot 75,1991,49,4155,131,-11461

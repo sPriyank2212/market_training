@@ -1,0 +1,6 @@
+.env
+data/cache/
+data/scrip_master.csv
+__pycache__/
+.pytest_cache/
+*.pyc
