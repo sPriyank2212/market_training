@@ -1,0 +1,12 @@
+# credentials - never commit
+.env
+.env.local
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# raw screenshots (large; browser tabs/personal content) and generated runs
+_Ss/
+_Ss.zip
