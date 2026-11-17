@@ -87,7 +87,9 @@ class DhanClient:
         self._token = os.environ.get("DHAN_ACCESS_TOKEN", "")
 
     def __repr__(self) -> str:
-        return f"DhanClient(client_id={self.client_id!r}, token={mask_token(self._token)})"
+        cid = self.client_id
+        masked_id = (cid[:2] + "..." + cid[-2:]) if len(cid) > 4 else ("set" if cid else "unset")
+        return f"DhanClient(client_id={masked_id}, token={mask_token(self._token)})"
 
     def _headers(self) -> dict:
         if not self.client_id or not self._token:

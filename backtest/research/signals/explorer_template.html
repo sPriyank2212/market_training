@@ -1,0 +1,84 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Signals explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"></script>
+<style>
+:root{--bg:#fff;--fg:#1d2430;--mut:#6b7380;--card:#f4f6f9;--line:#dde1e8;--g:#1a9850;--r:#d73027;--b:#4575b4;--o:#e08214}
+@media(prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e6e9ef;--mut:#9aa3b2;--card:#1d222b;--line:#2c333f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,Segoe UI,sans-serif}
+header{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--line)}
+h1{font-size:16px;margin:0 8px 0 0}select,button{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:5px 10px;font:inherit;cursor:pointer}
+button.on{background:var(--b);color:#fff;border-color:var(--b)}.sum{color:var(--mut);margin-left:auto}
+main{display:grid;grid-template-columns:330px 1fr;gap:12px;padding:12px 16px}@media(max-width:900px){main{grid-template-columns:1fr}}
+#list{max-height:calc(100vh - 150px);overflow:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%}th,td{padding:5px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}th{position:sticky;top:0;background:var(--card);font-weight:600}
+tr.row{cursor:pointer}tr.row:hover{background:var(--card)}tr.sel{background:color-mix(in srgb,var(--o) 22%,transparent)}
+.pill{padding:1px 7px;border-radius:10px;color:#fff;font-size:12px}.g{background:var(--g)}.r{background:var(--r)}.x{background:#8a8f99}.b{background:var(--b)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:10px}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px 14px}.kv div span{display:block;color:var(--mut);font-size:12px}
+.warn{color:#9b4dca;font-weight:600}.hint{color:var(--mut);font-size:12px;margin-top:6px}
+</style></head><body>
+<header><h1>Signals explorer</h1>
+<select id="day"></select><span id="idxbtns"></span>
+<button id="prev">&#9664; prev</button><button id="next">next &#9654;</button>
+<span class="sum" id="sum"></span></header>
+<main><div><div id="list"><table><thead><tr><th>Time</th><th>Contract</th><th>Result</th><th>P&amp;L &#8377;</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="hint">Click a row or a marker on the price chart. Left/Right arrow keys step through trades. Option chart opens zoomed on the trade; double-click it to see the whole day.</div></div>
+<div><div id="spot" style="height:360px"></div><div id="opt" style="height:420px"></div><div class="card" id="info">Select a signal.</div></div></main>
+<script>
+const DATA=/*DATA*/null;
+const C={g:'#1a9850',r:'#d73027',x:'#8a8f99',b:'#4575b4'};
+const st=s=>/Target/.test(s)?'g':/SL/.test(s)?'r':/EOD|Active/.test(s)?'b':'x';
+let day,idx,sel=0;
+const $=id=>document.getElementById(id);
+const dark=matchMedia('(prefers-color-scheme:dark)').matches;
+const ink=dark?'#e6e9ef':'#1d2430',grid=dark?'#2c333f':'#e6e9ef';
+const lay=(t,extra)=>Object.assign({title:{text:t,font:{size:13},x:0.01},margin:{l:55,r:20,t:34,b:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',
+ font:{color:ink},xaxis:{gridcolor:grid,rangeslider:{visible:false}},yaxis:{gridcolor:grid},hovermode:'x unified',showlegend:false},extra||{});
+function init(){const days=Object.keys(DATA);$('day').innerHTML=days.map(d=>`<option>${d}</option>`).join('');day=days[0];$('day').onchange=e=>{day=e.target.value;pickIdx();};pickIdx();
+ $('prev').onclick=()=>go(-1);$('next').onclick=()=>go(1);addEventListener('keydown',e=>{if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1);});}
+function pickIdx(){const ks=Object.keys(DATA[day]);if(!ks.includes(idx))idx=ks[0];
+ $('idxbtns').innerHTML=ks.map(k=>`<button class="${k===idx?'on':''}" data-k="${k}">${k} (${DATA[day][k].trades.length})</button>`).join(' ');
+ document.querySelectorAll('#idxbtns button').forEach(b=>b.onclick=()=>{idx=b.dataset.k;pickIdx();});sel=0;render();}
+function go(d){const n=DATA[day][idx].trades.length;sel=(sel+d+n)%n;render();}
+function render(){const D=DATA[day][idx],T=D.trades;
+ const ex=T.filter(t=>t.pnl!=null);const tot=ex.reduce((a,t)=>a+t.pnl,0);
+ $('sum').textContent=`${T.length} signals | ${ex.length} executed | recorded P&L Rs ${Math.round(tot).toLocaleString()}`;
+ $('rows').innerHTML=T.map(t=>`<tr class="row ${t.id===sel?'sel':''}" data-i="${t.id}"><td>${t.hhmm}</td><td>${t.strike} ${t.opt}</td><td><span class="pill ${st(t.status)}">${t.status||'?'}</span></td><td>${t.pnl==null?'':Math.round(t.pnl).toLocaleString()}</td></tr>`).join('');
+ document.querySelectorAll('#rows tr').forEach(r=>r.onclick=()=>{sel=+r.dataset.i;render();});
+ const sel_row=document.querySelector('#rows tr.sel');if(sel_row)sel_row.scrollIntoView({block:'nearest'});
+ const s=D.spot;const shapes=T.filter(t=>t.id===sel).map(t=>({type:'line',x0:t.t,x1:t.t,yref:'paper',y0:0,y1:1,line:{color:'#e08214',width:2}}));
+ Plotly.react('spot',[
+  {x:s.t,open:s.o,high:s.h,low:s.l,close:s.c,type:'candlestick',increasing:{line:{color:'#5a8f6a'}},decreasing:{line:{color:'#b86a6a'}},name:idx,hoverinfo:'x+y'},
+  {x:s.t,y:s.vwap,mode:'lines',line:{color:'#e08214',width:1,dash:'dot'},name:'VWAP',hoverinfo:'skip'},
+  {x:T.map(t=>t.t),y:T.map(t=>t.spot_at),mode:'markers',type:'scatter',customdata:T.map(t=>t.id),
+   marker:{symbol:T.map(t=>t.opt==='CE'?'triangle-up':'triangle-down'),size:T.map(t=>t.id===sel?17:11),color:T.map(t=>C[st(t.status)]),line:{color:ink,width:T.map(t=>t.id===sel?2.5:0.8)}},
+   text:T.map(t=>`${t.hhmm} ${t.strike} ${t.opt}<br>${t.status}${t.pnl!=null?' Rs '+Math.round(t.pnl):''}`),hovertemplate:'%{text}<extra></extra>'}
+ ],lay(`${idx} ${day} - price and signals (up = CE, down = PE; green = target, red = SL, grey = not triggered, blue = EOD/active)`,{shapes:shapes,hovermode:'closest'}),{responsive:true,displaylogo:false});
+ const el=$('spot');if(el.removeAllListeners)el.removeAllListeners('plotly_click');
+ el.on('plotly_click',e=>{const p=e.points.find(p=>p.customdata!==undefined);if(p){sel=p.customdata;render();}});
+ option(T[sel]);}
+function option(t){const info=$('info');if(!t){return;}
+ if(!t.ser){Plotly.react('opt',[],lay(`${t.hhmm} ${t.strike} ${t.opt} - no option candles (strike outside ATM+-10, or day not downloaded)`));}
+ else{const o=t.ser;const sh=[],an=[];
+  const sh2=(iso,m)=>{const d=new Date(iso+'Z');d.setUTCMinutes(d.getUTCMinutes()+m);return d.toISOString().slice(0,16).replace('T',' ');};
+  const xr=[sh2(t.t,-15),sh2(t.exit_t||t.t,t.exit_t?15:60)];
+  const hl=(y,c,d,n)=>{if(y==null)return;sh.push({type:'line',xref:'paper',x0:0,x1:1,y0:y,y1:y,line:{color:c,width:1.3,dash:d}});an.push({xref:'paper',x:1,y:y,xanchor:'right',yanchor:'bottom',text:`${n} ${y}`,showarrow:false,font:{size:11,color:c}});};
+  hl(t.entry,ink,'solid','Entry');hl(t.sl,C.r,'dash','SL');hl(t.t1,C.g,'dash','T1');hl(t.t2,'#006837','dot','T2');
+  sh.push({type:'line',x0:t.t,x1:t.t,yref:'paper',y0:0,y1:1,line:{color:'#e08214',width:1.5}});
+  const pts=[];if(t.ent_t)pts.push({x:[t.ent_t],y:[t.entry],name:'replay entry bar',marker:{symbol:'circle',size:11,color:ink}});
+  if(t.exit_t){const lv=t.rep==='SL Hit'?t.sl:(t.rep==='Target Hit'?t.t2:t.t1);pts.push({x:[t.exit_t],y:[lv],name:'replay exit: '+t.rep,marker:{symbol:'x',size:14,color:C[st(t.rep)],line:{width:2,color:ink}}});}
+  const cd=o.t.map((_,i)=>[o.v[i],o.oi[i],o.iv[i]]);
+  Plotly.react('opt',[{x:o.t,open:o.o,high:o.h,low:o.l,close:o.c,type:'candlestick',increasing:{line:{color:'#2b7bba'}},decreasing:{line:{color:'#c0392b'}},hoverinfo:'x+y'},
+   {x:o.t,y:o.c,mode:'lines',line:{width:0},customdata:cd,hovertemplate:'vol %{customdata[0]:,}<br>OI %{customdata[1]:,}<br>IV %{customdata[2]}%<extra></extra>'}]
+   .concat(pts.map(p=>Object.assign({mode:'markers',type:'scatter',hovertemplate:'%{x}<br>%{fullData.name}<extra></extra>'},p))),
+   lay(`${t.hhmm}  ${t.strike} ${t.opt} option premium (1-min). Orange line = signal minute`,{shapes:sh,annotations:an,hovermode:'x',xaxis:{gridcolor:grid,rangeslider:{visible:false},range:xr}}),{responsive:true,displaylogo:false});}
+ const norm=x=>(x||'').replace('Target Hit','Target 1 Hit');
+ const agree=t.rep&&t.status?norm(t.rep)===norm(t.status):null;
+ const k=(a,b)=>`<div><span>${a}</span>${b==null||b===''?'-':b}</div>`;
+ info.innerHTML=`<div class="kv">${k('Signal',t.hhmm+' | '+t.strike+' '+t.opt)}${k('Expiry',t.expiry)}${k('Lot',t.lot)}${k('Spot at signal',t.spot_at)}
+ ${k('Entry',t.entry)}${k('SL',t.sl)}${k('T1',t.t1)}${k('T2',t.t2)}${k('Exit (recorded)',t.exit)}${k('Recorded status',t.status)}${k('P&L Rs',t.pnl)}
+ ${k('Replay on real candles',t.rep||'-')}${k('Replay entry bar',t.ent_t?t.ent_t.slice(11,16):'-')}${k('Replay exit bar',t.exit_t?t.exit_t.slice(11,16):'-')}</div>
+ ${agree===false?'<div class="warn" style="margin-top:8px">Replay on the real candles disagrees with the recorded status.</div>':''}
+ ${t.status==='Not Triggered'?'<div class="hint">Not Triggered: the app recorded no entry; the levels shown are the ones it displayed.</div>':''}`;}
+init();
+</script></body></html>

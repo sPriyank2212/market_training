@@ -1,0 +1,259 @@
+row,idx,day,split,rec,trade,T,A_sl,A_t1,B_sl,B_t1
+1,NIFTY,2026-10-19,fit,SL Hit,23000CE,2026-10-19 09:18:00,Target Hit,Target Hit,Target Hit,Target Hit
+2,NIFTY,2026-10-19,fit,Target Hit,23200PE,2026-10-19 09:24:00,Target Hit,Target Hit,Target Hit,Target Hit
+5,NIFTY,2026-10-19,fit,Target 1 Hit,23100PE,2026-10-19 09:41:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+6,NIFTY,2026-10-19,fit,SL Hit,23000CE,2026-10-19 09:45:00,SL Hit,SL Hit,SL Hit,SL Hit
+7,NIFTY,2026-10-19,fit,Target 1 Hit,23200PE,2026-10-19 09:52:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+8,NIFTY,2026-10-19,fit,Target 1 Hit,22950CE,2026-10-19 10:08:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+9,SENSEX,2026-10-19,fit,Target 1 Hit,74400CE,2026-10-19 10:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+11,NIFTY,2026-10-19,fit,Target 1 Hit,22950CE,2026-10-19 10:44:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+12,NIFTY,2026-10-19,fit,Target 1 Hit,22900CE,2026-10-19 10:59:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+13,NIFTY,2026-10-19,fit,SL Hit,23050CE,2026-10-19 11:09:00,SL Hit,SL Hit,SL Hit,SL Hit
+14,NIFTY,2026-10-19,fit,SL Hit,22900CE,2026-10-19 11:18:00,SL Hit,SL Hit,SL Hit,SL Hit
+15,NIFTY,2026-10-19,fit,Target 1 Hit,23050PE,2026-10-19 11:30:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+17,NIFTY,2026-10-19,fit,SL Hit,23100PE,2026-10-19 11:51:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+18,NIFTY,2026-10-19,fit,Target 1 Hit,22900PE,2026-10-19 12:31:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+19,NIFTY,2026-10-19,fit,Target 1 Hit,23050PE,2026-10-19 12:41:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+20,NIFTY,2026-10-19,fit,Target 1 Hit,23100PE,2026-10-19 12:49:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+21,NIFTY,2026-10-19,fit,Target 1 Hit,22950PE,2026-10-19 13:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+22,NIFTY,2026-10-19,fit,Target 1 Hit,23000PE,2026-10-19 13:17:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+23,NIFTY,2026-10-19,fit,Target 1 Hit,22950PE,2026-10-19 13:44:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+24,NIFTY,2026-10-19,fit,Target 1 Hit,22800CE,2026-10-19 13:45:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+26,NIFTY,2026-10-19,fit,Target 1 Hit,22800PE,2026-10-19 14:07:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+27,NIFTY,2026-10-19,fit,Target 1 Hit,22800CE,2026-10-19 14:31:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+30,SENSEX,2026-10-21,fit,SL Hit,74400CE,2026-10-21 09:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+31,SENSEX,2026-10-21,fit,SL Hit,74600CE,2026-10-21 09:28:00,Target Hit,Target Hit,Target Hit,Target Hit
+33,NIFTY,2026-10-21,fit,Target 1 Hit,23100PE,2026-10-21 09:52:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+34,NIFTY,2026-10-21,fit,Target 1 Hit,23000PE,2026-10-21 10:01:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+36,NIFTY,2026-10-21,fit,Target 1 Hit,22950PE,2026-10-21 10:08:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+37,NIFTY,2026-10-21,fit,SL Hit,23000CE,2026-10-21 10:42:00,SL Hit,SL Hit,SL Hit,SL Hit
+38,SENSEX,2026-10-21,fit,Target 1 Hit,74100PE,2026-10-21 11:12:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+40,NIFTY,2026-10-21,fit,Target 1 Hit,22850PE,2026-10-21 11:40:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+41,NIFTY,2026-10-21,fit,Target 1 Hit,22850PE,2026-10-21 11:53:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+42,NIFTY,2026-10-21,fit,Target 1 Hit,22800PE,2026-10-21 12:15:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+43,NIFTY,2026-10-21,fit,Target 1 Hit,22750CE,2026-10-21 12:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+44,NIFTY,2026-10-21,fit,SL Hit,22750CE,2026-10-21 12:50:00,SL Hit,SL Hit,SL Hit,SL Hit
+45,SENSEX,2026-10-21,fit,Target 1 Hit,73300PE,2026-10-21 13:05:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+46,SENSEX,2026-10-21,fit,Target 1 Hit,73600PE,2026-10-21 13:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+48,NIFTY,2026-10-21,fit,SL Hit,22800PE,2026-10-21 13:39:00,SL Hit,SL Hit,SL Hit,SL Hit
+49,SENSEX,2026-10-21,fit,SL Hit,73500PE,2026-10-21 13:40:00,SL Hit,SL Hit,SL Hit,SL Hit
+50,SENSEX,2026-10-21,fit,Target 1 Hit,73200PE,2026-10-21 13:55:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+51,SENSEX,2026-10-21,fit,Target 1 Hit,73200CE,2026-10-21 15:03:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+52,NIFTY,2026-10-23,val,SL Hit,22800CE,2026-10-23 09:20:00,SL Hit,SL Hit,SL Hit,SL Hit
+53,SENSEX,2026-10-23,val,Target 1 Hit,72800PE,2026-10-23 09:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+54,NIFTY,2026-10-23,val,Target 1 Hit,22750PE,2026-10-23 09:29:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+55,NIFTY,2026-10-23,val,SL Hit,22800PE,2026-10-23 09:33:00,SL Hit,SL Hit,SL Hit,SL Hit
+56,NIFTY,2026-10-23,val,SL Hit,22750PE,2026-10-23 09:36:00,SL Hit,SL Hit,SL Hit,SL Hit
+57,NIFTY,2026-10-23,val,Target 1 Hit,22700PE,2026-10-23 09:43:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+58,NIFTY,2026-10-23,val,Target 1 Hit,22750PE,2026-10-23 09:49:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+59,NIFTY,2026-10-23,val,Target 1 Hit,22750PE,2026-10-23 09:52:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+60,NIFTY,2026-10-23,val,Target 1 Hit,22650PE,2026-10-23 10:05:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+62,NIFTY,2026-10-23,val,Target 1 Hit,22500PE,2026-10-23 10:20:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+64,NIFTY,2026-10-23,val,Target 1 Hit,22550PE,2026-10-23 10:32:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+65,NIFTY,2026-10-23,val,SL Hit,22550PE,2026-10-23 11:01:00,SL Hit,SL Hit,SL Hit,SL Hit
+66,NIFTY,2026-10-23,val,Target 1 Hit,22500PE,2026-10-23 11:29:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+67,NIFTY,2026-10-23,val,Target 1 Hit,22550PE,2026-10-23 11:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+68,NIFTY,2026-10-23,val,Target 1 Hit,22550PE,2026-10-23 12:45:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+69,NIFTY,2026-10-23,val,Target 1 Hit,22450PE,2026-10-23 12:46:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+70,NIFTY,2026-10-23,val,SL Hit,22550PE,2026-10-23 12:52:00,SL Hit,SL Hit,SL Hit,SL Hit
+71,NIFTY,2026-10-23,val,Target 1 Hit,22400PE,2026-10-23 13:05:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+72,SENSEX,2026-10-23,val,SL Hit,71900PE,2026-10-23 13:08:00,SL Hit,SL Hit,SL Hit,SL Hit
+73,NIFTY,2026-10-23,val,SL Hit,22500PE,2026-10-23 13:21:00,SL Hit,SL Hit,SL Hit,SL Hit
+75,NIFTY,2026-10-23,val,SL Hit,22650CE,2026-10-23 13:49:00,NoEntry,NoEntry,NoEntry,NoEntry
+76,NIFTY,2026-10-23,val,Target 1 Hit,22600PE,2026-10-23 13:52:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+77,NIFTY,2026-10-23,val,Target 1 Hit,22600PE,2026-10-23 14:18:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+79,NIFTY,2026-10-27,fit,SL Hit,22800PE,2026-10-27 09:17:00,SL Hit,SL Hit,SL Hit,SL Hit
+80,NIFTY,2026-10-27,fit,Target 1 Hit,22550CE,2026-10-27 09:22:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+81,NIFTY,2026-10-27,fit,Target 1 Hit,22600CE,2026-10-27 09:30:00,SL Hit,SL Hit,SL Hit,SL Hit
+82,NIFTY,2026-10-27,fit,SL Hit,22650CE,2026-10-27 09:30:00,SL Hit,SL Hit,SL Hit,SL Hit
+83,NIFTY,2026-10-27,fit,Target 1 Hit,22600CE,2026-10-27 09:35:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+85,NIFTY,2026-10-27,fit,Target 1 Hit,22750CE,2026-10-27 09:41:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+86,NIFTY,2026-10-27,fit,Target 1 Hit,22850PE,2026-10-27 10:15:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+87,NIFTY,2026-10-27,fit,Target 1 Hit,22550CE,2026-10-27 10:27:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+88,NIFTY,2026-10-27,fit,SL Hit,22600CE,2026-10-27 10:38:00,SL Hit,SL Hit,SL Hit,SL Hit
+89,NIFTY,2026-10-27,fit,Target 1 Hit,22650CE,2026-10-27 10:55:00,NoEntry,NoEntry,NoEntry,NoEntry
+90,NIFTY,2026-10-27,fit,Target 1 Hit,22800PE,2026-10-27 11:13:00,SL Hit,SL Hit,SL Hit,SL Hit
+91,NIFTY,2026-10-27,fit,Target 1 Hit,22550CE,2026-10-27 11:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+92,NIFTY,2026-10-27,fit,Target 1 Hit,22550CE,2026-10-27 11:33:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+93,NIFTY,2026-10-27,fit,SL Hit,22600CE,2026-10-27 11:39:00,SL Hit,SL Hit,SL Hit,SL Hit
+94,NIFTY,2026-10-27,fit,Target 1 Hit,22600CE,2026-10-27 11:51:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+95,NIFTY,2026-10-27,fit,Target 1 Hit,22800PE,2026-10-27 12:09:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+96,NIFTY,2026-10-27,fit,SL Hit,22600CE,2026-10-27 12:43:00,SL Hit,SL Hit,SL Hit,SL Hit
+97,NIFTY,2026-10-27,fit,SL Hit,22700CE,2026-10-27 12:44:00,SL Hit,SL Hit,SL Hit,SL Hit
+98,NIFTY,2026-10-27,fit,SL Hit,22650CE,2026-10-27 12:59:00,NoEntry,NoEntry,NoEntry,NoEntry
+99,NIFTY,2026-10-27,fit,Target 1 Hit,22900PE,2026-10-27 13:02:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+100,NIFTY,2026-10-27,fit,Target 1 Hit,22600PE,2026-10-27 13:47:00,NoEntry,NoEntry,NoEntry,NoEntry
+101,NIFTY,2026-10-27,fit,SL Hit,22700PE,2026-10-27 14:22:00,SL Hit,SL Hit,SL Hit,SL Hit
+102,NIFTY,2026-10-27,fit,Target 1 Hit,22750CE,2026-10-27 14:42:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+103,NIFTY,2026-10-27,fit,Target 1 Hit,22750CE,2026-10-27 14:58:00,EOD Close,EOD Close,EOD Close,EOD Close
+104,SENSEX,2026-10-29,fit,Target 1 Hit,73200CE,2026-10-29 09:17:00,Target 1 Hit,Target 1 Hit,SL Hit,SL Hit
+105,NIFTY,2026-10-29,fit,Target 1 Hit,22750CE,2026-10-29 09:21:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+106,SENSEX,2026-10-29,fit,Target 1 Hit,73300CE,2026-10-29 09:25:00,Target Hit,Target Hit,Target 1 Hit,Target 1 Hit
+107,NIFTY,2026-10-29,fit,Target 1 Hit,22750CE,2026-10-29 09:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+108,SENSEX,2026-10-29,fit,Target 1 Hit,73200CE,2026-10-29 09:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+109,NIFTY,2026-10-29,fit,Target 1 Hit,22700CE,2026-10-29 09:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+110,NIFTY,2026-10-29,fit,Target 1 Hit,22800CE,2026-10-29 09:36:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+111,SENSEX,2026-10-29,fit,Target 1 Hit,73400CE,2026-10-29 09:37:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+112,SENSEX,2026-10-29,fit,Target 1 Hit,73400CE,2026-10-29 09:52:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+113,NIFTY,2026-10-29,fit,Target 1 Hit,22700CE,2026-10-29 10:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+114,NIFTY,2026-10-29,fit,SL Hit,22850PE,2026-10-29 10:20:00,SL Hit,SL Hit,SL Hit,SL Hit
+116,SENSEX,2026-10-29,fit,Target 1 Hit,73700CE,2026-10-29 10:46:00,NoEntry,NoEntry,NoEntry,NoEntry
+117,SENSEX,2026-10-29,fit,Target 1 Hit,73900PE,2026-10-29 10:53:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+118,NIFTY,2026-10-29,fit,SL Hit,22800CE,2026-10-29 10:55:00,SL Hit,SL Hit,SL Hit,SL Hit
+119,SENSEX,2026-10-29,fit,Target 1 Hit,73800CE,2026-10-29 11:21:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+120,NIFTY,2026-10-29,fit,Target 1 Hit,22850CE,2026-10-29 11:22:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+121,SENSEX,2026-10-29,fit,SL Hit,73600CE,2026-10-29 11:32:00,SL Hit,SL Hit,SL Hit,SL Hit
+122,SENSEX,2026-10-29,fit,Target 1 Hit,73600CE,2026-10-29 11:39:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+123,SENSEX,2026-10-29,fit,Target 1 Hit,73900CE,2026-10-29 11:49:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+124,SENSEX,2026-10-29,fit,Target Hit,74000CE,2026-10-29 12:15:00,SL Hit,SL Hit,SL Hit,SL Hit
+126,SENSEX,2026-10-29,fit,Target 1 Hit,74000CE,2026-10-29 13:08:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+127,NIFTY,2026-10-29,fit,Target 1 Hit,22850CE,2026-10-29 13:09:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+128,SENSEX,2026-10-29,fit,Target 1 Hit,73700CE,2026-10-29 13:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+129,SENSEX,2026-10-29,fit,SL Hit,74000PE,2026-10-29 13:29:00,SL Hit,SL Hit,SL Hit,SL Hit
+130,SENSEX,2026-10-29,fit,Target 1 Hit,73600CE,2026-10-29 13:38:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+131,SENSEX,2026-10-29,fit,Target 1 Hit,74100CE,2026-10-29 13:42:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+132,SENSEX,2026-10-29,fit,Target 1 Hit,74100CE,2026-10-29 13:48:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+133,SENSEX,2026-10-29,fit,Target 1 Hit,73700CE,2026-10-29 13:55:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+136,SENSEX,2026-10-29,fit,Target 1 Hit,74100CE,2026-10-29 14:44:00,NoEntry,NoEntry,NoEntry,NoEntry
+138,NIFTY,2026-10-30,val,Target 1 Hit,22950CE,2026-10-30 09:17:00,Target Hit,Target Hit,Target Hit,Target Hit
+139,SENSEX,2026-10-30,val,SL Hit,74800CE,2026-10-30 09:21:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+140,NIFTY,2026-10-30,val,SL Hit,22950PE,2026-10-30 09:28:00,NoEntry,NoEntry,NoEntry,NoEntry
+141,NIFTY,2026-10-30,val,Target 1 Hit,22900CE,2026-10-30 09:30:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+142,NIFTY,2026-10-30,val,Target 1 Hit,23000CE,2026-10-30 09:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+143,SENSEX,2026-10-30,val,SL Hit,74900CE,2026-10-30 09:35:00,SL Hit,SL Hit,SL Hit,SL Hit
+144,NIFTY,2026-10-30,val,Target 1 Hit,22950PE,2026-10-30 09:45:00,NoEntry,NoEntry,NoEntry,NoEntry
+145,SENSEX,2026-10-30,val,SL Hit,74700CE,2026-10-30 09:52:00,SL Hit,SL Hit,Target 1 Hit,Target 1 Hit
+147,NIFTY,2026-10-30,val,Target 1 Hit,22950PE,2026-10-30 10:06:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+149,NIFTY,2026-10-30,val,SL Hit,22900PE,2026-10-30 10:29:00,SL Hit,SL Hit,SL Hit,SL Hit
+150,NIFTY,2026-10-30,val,Target 1 Hit,22900CE,2026-10-30 10:42:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+151,NIFTY,2026-10-30,val,Target 1 Hit,22850CE,2026-10-30 10:51:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+153,NIFTY,2026-10-30,val,Target 1 Hit,22900CE,2026-10-30 11:13:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+154,NIFTY,2026-10-30,val,Target 1 Hit,23000CE,2026-10-30 11:21:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+155,NIFTY,2026-10-30,val,Target 1 Hit,22950CE,2026-10-30 11:30:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+156,NIFTY,2026-10-30,val,Target 1 Hit,22950CE,2026-10-30 11:45:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+157,NIFTY,2026-10-30,val,Target 1 Hit,23050CE,2026-10-30 11:45:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+160,NIFTY,2026-10-30,val,Target 1 Hit,23150PE,2026-10-30 12:32:00,NoEntry,NoEntry,NoEntry,NoEntry
+161,NIFTY,2026-10-30,val,SL Hit,23100CE,2026-10-30 12:44:00,SL Hit,SL Hit,SL Hit,SL Hit
+163,SENSEX,2026-10-30,val,SL Hit,75300CE,2026-10-30 12:47:00,SL Hit,SL Hit,SL Hit,SL Hit
+164,NIFTY,2026-10-30,val,Target 1 Hit,23100PE,2026-10-30 13:08:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+165,NIFTY,2026-10-30,val,SL Hit,23000CE,2026-10-30 13:11:00,SL Hit,SL Hit,SL Hit,SL Hit
+166,NIFTY,2026-10-30,val,Target 1 Hit,22950CE,2026-10-30 13:35:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+167,SENSEX,2026-10-30,val,Target 1 Hit,73800PE,2026-10-30 13:36:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+168,NIFTY,2026-10-30,val,SL Hit,22950CE,2026-10-30 14:25:00,SL Hit,SL Hit,SL Hit,SL Hit
+169,NIFTY,2026-10-30,val,EOD Close,22950CE,2026-10-30 14:55:00,EOD Close,EOD Close,EOD Close,EOD Close
+170,NIFTY,2026-11-03,fit,Target 1 Hit,23500CE,2026-11-03 09:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+171,NIFTY,2026-11-03,fit,Target 1 Hit,23450CE,2026-11-03 09:27:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+172,NIFTY,2026-11-03,fit,Target 1 Hit,23550CE,2026-11-03 09:32:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+173,SENSEX,2026-11-03,fit,Target 1 Hit,76600CE,2026-11-03 09:33:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+174,NIFTY,2026-11-03,fit,SL Hit,23500CE,2026-11-03 09:34:00,SL Hit,SL Hit,SL Hit,SL Hit
+176,NIFTY,2026-11-03,fit,SL Hit,23800PE,2026-11-03 10:04:00,SL Hit,SL Hit,SL Hit,SL Hit
+177,NIFTY,2026-11-03,fit,Target 1 Hit,23500CE,2026-11-03 10:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+178,SENSEX,2026-11-03,fit,Target 1 Hit,76300CE,2026-11-03 10:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+179,NIFTY,2026-11-03,fit,Target 1 Hit,23600CE,2026-11-03 10:32:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+180,SENSEX,2026-11-03,fit,SL Hit,76700CE,2026-11-03 10:36:00,SL Hit,SL Hit,SL Hit,SL Hit
+181,NIFTY,2026-11-03,fit,SL Hit,23450CE,2026-11-03 10:39:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+182,NIFTY,2026-11-03,fit,Target 1 Hit,23650CE,2026-11-03 10:53:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+184,NIFTY,2026-11-03,fit,Target 1 Hit,23800PE,2026-11-03 11:27:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+185,NIFTY,2026-11-03,fit,Target 1 Hit,23500CE,2026-11-03 11:41:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+186,NIFTY,2026-11-03,fit,Target 1 Hit,23700CE,2026-11-03 11:54:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+187,NIFTY,2026-11-03,fit,SL Hit,23500CE,2026-11-03 12:01:00,SL Hit,SL Hit,SL Hit,SL Hit
+188,NIFTY,2026-11-03,fit,Target 1 Hit,23500CE,2026-11-03 12:24:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+189,NIFTY,2026-11-03,fit,Target 1 Hit,23550CE,2026-11-03 12:49:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+190,NIFTY,2026-11-03,fit,Target 1 Hit,23500CE,2026-11-03 13:05:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+191,NIFTY,2026-11-03,fit,Target 1 Hit,23600CE,2026-11-03 13:21:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+192,NIFTY,2026-11-03,fit,SL Hit,23650CE,2026-11-03 13:39:00,SL Hit,SL Hit,SL Hit,SL Hit
+193,NIFTY,2026-11-03,fit,SL Hit,23800CE,2026-11-03 13:54:00,SL Hit,SL Hit,SL Hit,SL Hit
+194,NIFTY,2026-11-03,fit,Target 1 Hit,23600CE,2026-11-03 14:00:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+195,NIFTY,2026-11-03,fit,EOD Close,23600PE,2026-11-03 14:19:00,NoEntry,NoEntry,NoEntry,NoEntry
+196,NIFTY,2026-11-03,fit,SL Hit,23700PE,2026-11-03 14:25:00,SL Hit,SL Hit,SL Hit,SL Hit
+197,SENSEX,2026-11-04,fit,Target 1 Hit,77300CE,2026-11-04 09:19:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+198,SENSEX,2026-11-04,fit,Target 1 Hit,77100CE,2026-11-04 09:20:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+199,SENSEX,2026-11-04,fit,Target 1 Hit,77200CE,2026-11-04 09:22:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+200,NIFTY,2026-11-04,fit,Target 1 Hit,23950CE,2026-11-04 09:25:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+202,SENSEX,2026-11-04,fit,SL Hit,77200CE,2026-11-04 09:40:00,SL Hit,SL Hit,SL Hit,SL Hit
+203,NIFTY,2026-11-04,fit,SL Hit,24000CE,2026-11-04 09:44:00,SL Hit,SL Hit,SL Hit,SL Hit
+204,SENSEX,2026-11-04,fit,SL Hit,77500CE,2026-11-04 09:44:00,SL Hit,SL Hit,SL Hit,SL Hit
+206,SENSEX,2026-11-04,fit,Target 1 Hit,77300PE,2026-11-04 10:01:00,SL Hit,SL Hit,SL Hit,SL Hit
+207,NIFTY,2026-11-04,fit,SL Hit,23950CE,2026-11-04 10:23:00,SL Hit,SL Hit,SL Hit,SL Hit
+208,NIFTY,2026-11-04,fit,Target 1 Hit,23650PE,2026-11-04 11:06:00,NoEntry,NoEntry,NoEntry,NoEntry
+209,NIFTY,2026-11-04,fit,Target 1 Hit,23850CE,2026-11-04 11:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+211,NIFTY,2026-11-04,fit,Target 1 Hit,23950CE,2026-11-04 11:14:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+212,SENSEX,2026-11-04,fit,SL Hit,76800PE,2026-11-04 11:37:00,NoEntry,NoEntry,NoEntry,NoEntry
+213,NIFTY,2026-11-04,fit,Target 1 Hit,23700PE,2026-11-04 11:38:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+214,NIFTY,2026-11-04,fit,Target 1 Hit,23800PE,2026-11-04 11:48:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+215,SENSEX,2026-11-04,fit,Target 1 Hit,76600PE,2026-11-04 11:49:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+216,SENSEX,2026-11-04,fit,Target 1 Hit,76800PE,2026-11-04 12:08:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+217,NIFTY,2026-11-04,fit,Target 1 Hit,23750CE,2026-11-04 12:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+218,NIFTY,2026-11-04,fit,Target 1 Hit,23800CE,2026-11-04 12:32:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+219,NIFTY,2026-11-04,fit,Target 1 Hit,23900CE,2026-11-04 12:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+220,SENSEX,2026-11-04,fit,Target 1 Hit,77100CE,2026-11-04 12:35:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+221,NIFTY,2026-11-04,fit,SL Hit,23750PE,2026-11-04 12:37:00,NoEntry,NoEntry,NoEntry,NoEntry
+222,NIFTY,2026-11-04,fit,Target 1 Hit,23800CE,2026-11-04 12:57:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+223,SENSEX,2026-11-04,fit,Target 1 Hit,76900CE,2026-11-04 13:07:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+224,NIFTY,2026-11-04,fit,Target 1 Hit,23950CE,2026-11-04 13:10:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+225,SENSEX,2026-11-04,fit,Target 1 Hit,77100CE,2026-11-04 13:11:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+226,SENSEX,2026-11-04,fit,Target 1 Hit,77100CE,2026-11-04 14:24:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+228,SENSEX,2026-11-05,val,SL Hit,78600CE,2026-11-05 09:20:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+229,NIFTY,2026-11-05,val,Target 1 Hit,24350CE,2026-11-05 09:24:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+230,SENSEX,2026-11-05,val,SL Hit,78700CE,2026-11-05 09:25:00,SL Hit,SL Hit,SL Hit,SL Hit
+231,NIFTY,2026-11-05,val,Target 1 Hit,24300CE,2026-11-05 09:28:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+233,SENSEX,2026-11-05,val,Target 1 Hit,78400CE,2026-11-05 09:36:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+234,NIFTY,2026-11-05,val,Target 1 Hit,24300CE,2026-11-05 09:38:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+235,SENSEX,2026-11-05,val,Target 1 Hit,78700CE,2026-11-05 09:42:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+237,SENSEX,2026-11-05,val,Target 1 Hit,78800CE,2026-11-05 09:47:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+238,NIFTY,2026-11-05,val,Target 1 Hit,24400CE,2026-11-05 09:51:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+239,SENSEX,2026-11-05,val,Target 1 Hit,79000PE,2026-11-05 10:03:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+240,SENSEX,2026-11-05,val,SL Hit,79000PE,2026-11-05 10:22:00,SL Hit,SL Hit,SL Hit,SL Hit
+241,NIFTY,2026-11-05,val,Target 1 Hit,24400CE,2026-11-05 10:50:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+242,SENSEX,2026-11-05,val,SL Hit,78600PE,2026-11-05 10:55:00,SL Hit,SL Hit,SL Hit,SL Hit
+243,SENSEX,2026-11-05,val,SL Hit,78700CE,2026-11-05 11:32:00,NoEntry,NoEntry,NoEntry,NoEntry
+244,NIFTY,2026-11-05,val,Target 1 Hit,24450CE,2026-11-05 11:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+245,SENSEX,2026-11-05,val,Target 1 Hit,79000CE,2026-11-05 11:35:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+247,SENSEX,2026-11-05,val,Target 1 Hit,79300CE,2026-11-05 13:06:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+249,NIFTY,2026-11-05,val,Target 1 Hit,24450CE,2026-11-05 13:45:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+250,NIFTY,2026-11-05,val,SL Hit,24500CE,2026-11-05 13:53:00,SL Hit,SL Hit,SL Hit,SL Hit
+251,SENSEX,2026-11-05,val,Target 1 Hit,79200CE,2026-11-05 14:16:00,NoEntry,NoEntry,NoEntry,NoEntry
+252,SENSEX,2026-11-05,val,Target 1 Hit,79500PE,2026-11-05 14:19:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+253,SENSEX,2026-11-05,val,Target 1 Hit,79400CE,2026-11-05 14:27:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+254,SENSEX,2026-11-05,val,EOD Close,79800CE,2026-11-05 14:32:00,EOD Close,EOD Close,EOD Close,EOD Close
+255,SENSEX,2026-11-05,val,SL Hit,79500CE,2026-11-05 14:41:00,SL Hit,SL Hit,SL Hit,SL Hit
+257,NIFTY,2026-11-06,fit,Target Hit,24400CE,2026-11-06 09:18:00,Target Hit,Target Hit,Target 1 Hit,Target 1 Hit
+258,NIFTY,2026-11-06,fit,SL Hit,24450CE,2026-11-06 09:22:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+259,NIFTY,2026-11-06,fit,Target 1 Hit,24500CE,2026-11-06 09:23:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+260,NIFTY,2026-11-06,fit,Target 1 Hit,24500CE,2026-11-06 09:29:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+262,NIFTY,2026-11-06,fit,Target 1 Hit,24550CE,2026-11-06 09:33:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+265,NIFTY,2026-11-06,fit,Target 1 Hit,24550CE,2026-11-06 09:50:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+266,NIFTY,2026-11-06,fit,Target 1 Hit,24600CE,2026-11-06 11:03:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+267,NIFTY,2026-11-06,fit,Target 1 Hit,24600PE,2026-11-06 11:15:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+268,NIFTY,2026-11-06,fit,Target 1 Hit,24650CE,2026-11-06 11:16:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+270,NIFTY,2026-11-06,fit,Target 1 Hit,24600CE,2026-11-06 12:06:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+271,NIFTY,2026-11-06,fit,Target 1 Hit,24700CE,2026-11-06 12:20:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+272,NIFTY,2026-11-06,fit,Target 1 Hit,24650CE,2026-11-06 12:26:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+273,NIFTY,2026-11-06,fit,SL Hit,24650CE,2026-11-06 12:42:00,SL Hit,SL Hit,SL Hit,SL Hit
+275,NIFTY,2026-11-06,fit,Target 1 Hit,24700CE,2026-11-06 13:02:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+277,NIFTY,2026-11-06,fit,Target 1 Hit,24650CE,2026-11-06 13:16:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+278,NIFTY,2026-11-06,fit,Target 1 Hit,24750CE,2026-11-06 13:24:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+280,NIFTY,2026-11-06,fit,Target 1 Hit,24750CE,2026-11-06 14:15:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+281,NIFTY,2026-11-06,fit,Target 1 Hit,24850CE,2026-11-06 14:34:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+282,NIFTY,2026-11-06,fit,Target 1 Hit,24900CE,2026-11-06 15:00:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+283,NIFTY,2026-11-13,val,Target 1 Hit,25150PE,2026-11-13 09:16:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+284,NIFTY,2026-11-13,val,Target 1 Hit,25100PE,2026-11-13 09:18:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+286,NIFTY,2026-11-13,val,Target 1 Hit,25150CE,2026-11-13 09:28:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+287,NIFTY,2026-11-13,val,SL Hit,25000CE,2026-11-13 09:32:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+289,NIFTY,2026-11-13,val,Target 1 Hit,25100CE,2026-11-13 09:33:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+290,NIFTY,2026-11-13,val,Target 1 Hit,25150CE,2026-11-13 09:37:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+291,NIFTY,2026-11-13,val,Target 1 Hit,25200CE,2026-11-13 09:42:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+292,SENSEX,2026-11-13,val,Target 1 Hit,82600CE,2026-11-13 09:43:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+293,SENSEX,2026-11-13,val,SL Hit,82300CE,2026-11-13 09:55:00,SL Hit,SL Hit,SL Hit,SL Hit
+294,NIFTY,2026-11-13,val,Target 1 Hit,25200CE,2026-11-13 09:58:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+295,NIFTY,2026-11-13,val,Target 1 Hit,25200CE,2026-11-13 10:38:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+296,NIFTY,2026-11-13,val,SL Hit,25200CE,2026-11-13 10:48:00,SL Hit,SL Hit,SL Hit,SL Hit
+297,NIFTY,2026-11-13,val,SL Hit,25150CE,2026-11-13 11:08:00,SL Hit,SL Hit,SL Hit,SL Hit
+298,NIFTY,2026-11-13,val,Target 1 Hit,25200PE,2026-11-13 11:17:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+299,NIFTY,2026-11-13,val,Target 1 Hit,25150PE,2026-11-13 12:05:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+300,NIFTY,2026-11-13,val,SL Hit,25200PE,2026-11-13 12:18:00,SL Hit,SL Hit,SL Hit,SL Hit
+301,SENSEX,2026-11-13,val,Target 1 Hit,81100PE,2026-11-13 12:59:00,NoEntry,NoEntry,NoEntry,NoEntry
+302,NIFTY,2026-11-13,val,SL Hit,25100CE,2026-11-13 13:20:00,SL Hit,SL Hit,SL Hit,SL Hit
+303,SENSEX,2026-11-13,val,Target 1 Hit,80700PE,2026-11-13 13:43:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+304,NIFTY,2026-11-13,val,Target 1 Hit,25150PE,2026-11-13 13:44:00,Target 1 Hit,Target 1 Hit,Target 1 Hit,Target 1 Hit
+305,NIFTY,2026-11-13,val,SL Hit,25150PE,2026-11-13 14:15:00,SL Hit,SL Hit,SL Hit,SL Hit
