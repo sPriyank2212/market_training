@@ -1,3 +1,5 @@
+> **CORRECTION (2026-11-18): the v1 results in this file used 2025 candles, but the engine signals and the +₹13,452 target are from October 2026.** The v1 sections (§2, §1 'Test 1' row and the sensitivity/headline numbers) are INVALID; a corrected re-run is `versions/v3/`. The v2 research (2022–2026 data) is not affected by the date mix-up.
+
 # Backtester — consolidated summary of ALL tests (v1 + v2)
 
 Project: read-only Dhan-API backtester for the NIFTY/SENSEX "eight-check gate" (`market_training/backtest/`).

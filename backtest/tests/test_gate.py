@@ -19,7 +19,7 @@ CFG = load_config()
 
 
 def ts(hhmm: str) -> pd.Timestamp:
-    return pd.Timestamp(f"2025-10-06 {hhmm}", tz=IST)
+    return pd.Timestamp(f"2026-10-06 {hhmm}", tz=IST)
 
 
 def base(**kw) -> Signal:
@@ -205,7 +205,7 @@ def test_max_trades_cap():
 def test_generate_candidates_direction_and_threshold():
     closes = [100, 100, 130, 130, 95, 95, 95, 95]          # +30 burst, then -35 burst
     n = len(closes)
-    df = pd.DataFrame({"ts": pd.date_range("2025-10-06 09:15", periods=n, freq="5min", tz=IST),
+    df = pd.DataFrame({"ts": pd.date_range("2026-10-06 09:15", periods=n, freq="5min", tz=IST),
                        "open": closes, "high": np.array(closes) + 1, "low": np.array(closes) - 1,
                        "close": closes, "volume": 0})
     sigs = G.generate_candidates(compute_features(df, CFG), "NIFTY", CFG)

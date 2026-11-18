@@ -41,9 +41,17 @@ def bs_delta(S, K, T, r, sigma, is_call: bool):
 
 # ------------------------------------------------------------------ contract helpers
 def expiry_datetime(day: date, index: str, cfg: dict) -> pd.Timestamp:
-    """First date >= `day` falling on the index's weekly-expiry weekday, at 15:30 IST."""
-    wd = cfg["synth"]["expiry_weekday"][index]
-    d = day + timedelta(days=(wd - day.weekday()) % 7)
+    """Nearest weekly expiry on/after `day`, at 15:30 IST. Uses the resolved list in cfg['synth']['expiry_dates'] (holiday shifts, see expiries.py)
+    when attached; otherwise falls back to the plain weekday rule."""
+    resolved = (cfg["synth"].get("expiry_dates") or {}).get(index)
+    if resolved:
+        nxt = [e for e in resolved if e >= day]
+        if not nxt:
+            raise ValueError(f"no resolved {index} expiry on/after {day}")
+        d = nxt[0]
+    else:
+        wd = cfg["synth"]["expiry_weekday"][index]
+        d = day + timedelta(days=(wd - day.weekday()) % 7)
     return pd.Timestamp(f"{d:%Y-%m-%d} {cfg['data']['market_close']}", tz=IST)
 
 
@@ -80,6 +88,13 @@ def synth_path(feat: pd.DataFrame, i0: int, side: int, index: str, cfg: dict):
     row = feat.iloc[i0]
     expiry = expiry_datetime(row["ts"].date(), index, cfg)
     K = strike_for(float(row["close"]), side, index, cfg)
+    if s.get("dynamic_itm", False):
+        # research doc Section 6: if the ATM premium is below the C8 sanity band, step ONE strike ITM; never step OTM.
+        lo = cfg["gate"]["premium_band"][index][0]
+        T0 = float(years_to_expiry(row["ts_close"], expiry, cfg))
+        p_atm = float(bs_price(float(row["close"]), K, T0, s["risk_free"], s["iv"][index], side > 0))
+        if p_atm < lo:
+            K = K - side * s["strike_step"][index]
     c = Contract(index, side, K, expiry, "synth")
     f = feat.iloc[i0:]
     T = years_to_expiry(f["ts_close"], expiry, cfg)          # time at each bar's END

@@ -1,3 +1,5 @@
+> **INVALIDATED (found 2026-11-18):** v1 ran on **2025** candles by mistake; the engine signals and the +₹13,452 target are from **October 2026**. The conclusions below ("target not reproduced", sensitivity grid) compare two different years and must not be relied on. Use **v3** (`versions/v3/`).
+
 # Strategy v1 — eight-check gate, as originally specified
 
 Run: `BACKTEST_VERSION=v1 python backtest.py` (v1 is the default).

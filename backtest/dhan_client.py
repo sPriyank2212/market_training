@@ -36,7 +36,7 @@ def mask_token(token: str | None) -> str:
     return f"{token[:4]}...{token[-4:]}" if len(token) > 12 else "****"
 
 
-DEFAULT_VERSION = "v1"
+DEFAULT_VERSION = "v3"
 
 
 def active_version() -> str:
@@ -65,6 +65,9 @@ def load_config(version: str | None = None) -> dict:
         cfg = yaml.safe_load(f)
     if cfg.get("version") != v:
         raise ValueError(f"{path} declares version {cfg.get('version')!r}, expected {v!r}")
+    pol = (cfg.get("warmup") or {}).get("nan_policy", "fail")
+    if pol != "fail":
+        raise NotImplementedError(f"warmup.nan_policy={pol!r} is reserved for a later A/B; only 'fail' is implemented")
     return cfg
 
 

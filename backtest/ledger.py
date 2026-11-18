@@ -24,5 +24,5 @@ def make_row(**kw) -> dict:
 def write_ledger(rows: list[dict], path: Path | str) -> pd.DataFrame:
     df = pd.DataFrame(rows, columns=LEDGER_COLUMNS)
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(path, index=False)
+    df.to_csv(path, index=False)   # plain ASCII CSV: opens cleanly in Excel and pandas
     return df

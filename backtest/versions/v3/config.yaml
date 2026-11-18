@@ -1,0 +1,121 @@
+# Every threshold lives here. Nothing below is hardcoded in the .py files.
+# STRATEGY VERSION v3 — the v1 strategy logic, RE-RUN ON THE CORRECT YEAR (2026) with a data-validation gate.
+# v1 fetched Oct 2025 candles by mistake; its conclusions are invalid. Only dates, expiry handling and validation differ.
+version: v3
+
+gate:
+  th_trig:        { NIFTY: 20,  SENSEX: 60 }    # C1: signed 5-min burst in trade direction
+  th_exh:         { NIFTY: 40,  SENSEX: 130 }   # C2: SKIP if signed 30-min move >= this
+  rng_min: 0.15                                  # C4 range window (strict: rng_min < rng < rng_max)
+  rng_max: 0.85
+  midday_start: "12:00"                          # C5 blocked iff midday_start <= t < midday_end (IST)
+  midday_end:   "13:00"                          # exclusive: 13:00:00 is allowed
+  max_consec_sl: 2                               # C6 revenge chain -> timeout
+  timeout_minutes: 60
+  day_brake: -7000                               # C7 pass iff day_realised_pnl > day_brake (strict); <= trips
+  premium_band: { NIFTY: [120, 215], SENSEX: [300, 460] }   # C8, per-index, CE or PE
+
+flip_rule:
+  enabled: false     # SHIP DISABLED - provisional per research; needs forward validation
+  burst:   { NIFTY: 30, SENSEX: 90 }
+  life_minutes: 30
+
+exits:
+  sl_pct: 0.15        # SL = entry*(1-0.15); never widened
+  t1_pct: 0.08        # T1 = entry*1.08; on T1 fill, SL on remainder -> entry (cost)
+  t2_pct: 0.25        # T2 = entry*1.25
+  flatten_time: "15:15"
+  intrabar_tiebreak: sl_first   # bar spanning SL and T1 (or SL and T2): SL fills first
+  t1_fraction: 0.5      # share of the position sold at T1 (SPEC GAP - assumption, see v1/README)
+
+risk:
+  lot_size: { NIFTY: 65, SENSEX: 20 }   # verify from instrument master
+  max_trades_per_day: 12
+
+sanity:
+  # Research doc's trading days (2026). REFERENCE ONLY in own-scanner mode: the +13,452 figure came from the engine's
+  # actual 101 signals with screenshot fills, so this run is not expected to land on it and must NOT be tuned toward it.
+  days: ["2026-10-05", "2026-10-06", "2026-10-07", "2026-10-14", "2026-10-16"]
+  gate_target: 13452
+  engine_raw_target: -788
+  tolerance: 250
+  compare_in_modes: [engine_gate]     # target comparison only meaningful with the engine's signal list
+
+run:
+  start: "2026-10-05"     # full window; non-trading days silently dropped. Reported separately.
+  end:   "2026-10-17"
+  scanner: own            # own = scan 5-min bursts | engine_gate = read signals CSV (date,time,index,side)
+  engine_signals_csv: ""  # path for engine_gate mode; the decoded 101-signal list is NOT yet supplied
+
+warmup:
+  nan_policy: fail        # fail = a check needing a NaN value FAILS (v1 behaviour). pass | seed_prior_session reserved for later A/B
+
+mode: synth    # "synth" = Black-Scholes | "real" = Dhan expired-options data
+
+synth:
+  iv: { NIFTY: 0.13, SENSEX: 0.13 }     # ATM weekly IV assumption, explicit
+  risk_free: 0.065
+  strike_step: { NIFTY: 50, SENSEX: 100 }
+  min_T_minutes: 1                      # floor on time-to-expiry (expiry-day T->0 guard)
+  itm_steps: 0                          # base offset: 0 = ATM
+  dynamic_itm: true                     # step ONE strike ITM when the ATM premium is below the C8 band (never OTM)
+  expiry_weekday: { NIFTY: 1, SENSEX: 3 }   # fallback weekday rule only (0=Mon..6=Sun); holiday shifts come from the trading calendar (M4)
+
+data:
+  cache_dir: "data/cache"
+  manual_dir: "data/manual"     # file-based CandleSource fallback: {SYMBOL}_{YYYY-MM-DD}.csv
+  scrip_master_url: "https://images.dhan.co/api-data/api-scrip-master.csv"
+  scrip_master_path: "data/scrip_master.csv"
+  interval_minutes: 5
+  fetch_from: "09:00"      # request window start; Dhan's fromDate is exclusive at the boundary
+  market_open: "09:15"
+  market_close: "15:30"
+
+features:
+  m5_minutes: 5
+  m30_minutes: 30
+  trend_minutes: 60
+  signal_time: bar_start   # "bar_start" (default, as agreed at M1) | "bar_close" (= bar start + 5 min); used by C5/C6 stamps
+
+dhan:
+  base_url: "https://api.dhan.co/v2"
+  allowed_path_prefixes: ["/charts/"]    # expired/rolling options path added at M4 after docs check
+  max_retries: 3
+  backoff_seconds: 1.5
+  timeout_seconds: 20
+
+entry_fill: signal_close   # premium at the signal bar's close (v1 behaviour; no slippage/brokerage)
+
+validation:
+  year: 2026                 # every fetched candle must be in this year - non-bypassable
+  tolerance_pct: 0.15        # O/H/L/C vs Yahoo daily anchors
+  bars_expected: 75          # 09:15..15:25 bar starts
+  bars_acceptable: [73, 74, 75]   # 73-75 pass (73-74 with a warning; Yahoo itself has 73 on 2026-10-15)
+  # Yahoo reference anchors (5-min bars aggregated to daily, IST): [open, high, low, close]
+  anchors:
+    "2026-10-05": { NIFTY: [22532.40, 22621.80, 22397.50, 22555.75], SENSEX: [72340.95, 72631.10, 71840.18, 72382.39] }
+    "2026-10-06": { NIFTY: [22603.25, 22776.10, 22561.80, 22776.10], SENSEX: [72508.05, 73281.85, 72387.27, 73067.81] }
+    "2026-10-07": { NIFTY: [22690.45, 22717.25, 22546.55, 22603.05], SENSEX: [72904.52, 73477.28, 72468.72, 72638.70] }
+    "2026-10-08": { NIFTY: [22599.05, 22599.05, 22180.30, 22231.80], SENSEX: [72693.97, 72693.97, 71188.60, 71566.40] }
+    "2026-10-09": { NIFTY: [22316.80, 22580.50, 22295.20, 22520.45], SENSEX: [71776.67, 72668.67, 71747.82, 72472.33] }
+    "2026-10-12": { NIFTY: [22593.20, 22650.55, 22304.45, 22363.35], SENSEX: [72777.51, 72879.78, 71676.10, 71924.68] }
+    "2026-10-13": { NIFTY: [22364.15, 22721.95, 22288.70, 22721.95], SENSEX: [71951.73, 73044.91, 71712.60, 73033.78] }
+    "2026-10-14": { NIFTY: [22715.75, 22757.80, 22558.95, 22622.70], SENSEX: [73047.72, 73193.89, 72579.28, 72781.89] }
+    "2026-10-15": { NIFTY: [22671.30, 23056.20, 22637.40, 22997.35], SENSEX: [72964.16, 74762.53, 72898.67, 74315.61] }
+    "2026-10-16": { NIFTY: [23049.55, 23149.85, 22914.30, 23146.15], SENSEX: [74341.08, 74788.79, 74015.69, 74729.27] }
+  # Raw Yahoo 5-min files (bar-level diff); resolved relative to backtest/ (they sit in the project root, one level up).
+  yahoo_dir: ".."
+  yahoo_files: { NIFTY: "yahoo_5m_NIFTY_2026-10-05_to_16.csv", SENSEX: "yahoo_5m_SENSEX_2026-10-05_to_16.csv" }
+  # USER DECISION 2026-11-18 (option 1): STRICT bar-level + day-aggregate check on the TRADING WINDOW = bars whose start <= window_last_bar.
+  # Bars after it (15:20, 15:25) never reach a trade or a gate input (flat at 15:15, no entries closing >= 15:15). Dhan's 15:20 bar is a flat
+  # artefact and Yahoo's late SENSEX bars are noisy, so mismatches there are a visible WARNING, never a FAIL.
+  window_last_bar: "15:15"
+  late_bars_policy: warn
+
+expiries:
+  # Expiry days moved during this period (holiday shifts). Resolved at M4 from the instrument master / trading calendar, then
+  # ASSERTED against these known dates (15:30 IST). Never hardcode a weekday.
+  known:
+    NIFTY:  ["2026-10-06", "2026-10-13"]      # then Mon 2026-10-19 (holiday-shifted) and Tue 2026-10-27 - outside the sample window
+    SENSEX: ["2026-10-08", "2026-10-15"]
+  known_outside_window: { NIFTY: ["2026-10-19", "2026-10-27"] }
