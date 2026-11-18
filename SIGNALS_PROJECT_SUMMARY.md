@@ -107,3 +107,26 @@ python -m venv .venv
 - `signals/signals.xlsx` — extracted trades
 - `SIGNALS_PROJECT_SUMMARY.md` — this document
 - `.gitignore` — ignores `.venv/`, caches, `.env`, and the raw screenshot folder/zip (≈190 MB, show browser tabs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DHAN_ACCESS_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VyUmVnaW9uIjoiUjEiLCJpc3MiOiJkaGFuIiwicGFydG5lcklkIjoiIiwiZXhwIjoxNzk1MDMzMTAwLCJpYXQiOjE3OTQ5NDY3MDAsInRva2VuQ29uc3VtZXJUeXBlIjoiU0VMRiIsIndlYmhvb2tVcmwiOiIiLCJkaGFuQ2xpZW50SWQiOiIxMTE0NTM1NDQ4In0.IrXjbAPJIgnsCbEh6juHAefe_Nu1lDbC6kOJ8Iv7NVzk2RdNqtPWKOaKZUzjmC2rlv9K6vSn3K8NqOoeU2BfMQ
